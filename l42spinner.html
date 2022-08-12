@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>spinner</title>
+	<style type="text/css">
+		
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.spinner{
+			width: 30px;
+			height: 30px;
+			animation: myspin 2000ms infinite;
+		}
+
+		@keyframes myspin{
+			0%{
+				transform: rotate(0turn) scale(1);
+			}
+
+			25%{
+				transform: rotate(1turn) scale(1);
+			}
+
+			50%{
+				transform: rotate(1turn) scale(1.5);
+			}
+
+			75%{
+				transform: rotate(0turn) scale(1.5);
+			}
+
+			100%{
+				transform: rotate(0turn) scale(1);
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+	<img src="./img/loader.svg" alt="spinner" class="spinner" />
+
+</body>
+</html>

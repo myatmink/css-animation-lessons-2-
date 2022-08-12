@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Button Effect</title>
+	<style type="text/css">
+		
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+			background-color: #006b62;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			overflow: hidden;
+		}
+
+		.btn{
+			width: 350px;
+			height: 65px;
+			background-color: #000;
+			border: none;
+			box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+			cursor: pointer;
+
+			position: relative;
+		}
+
+		.btn span{
+			display: block;
+			font-size: 20px;
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+
+			/*transform is working on block elements*/
+			transform: scaleX(0.6);
+			transform-origin: left;
+		}
+
+		.btn em{
+			width: 100%;
+			height: 1px;
+			background-color: #fff;
+
+			/*display: block;*/
+
+			position: absolute;
+			top: 50%;
+			left: 0;
+
+			transform: scaleX(0.3);
+			transform-origin: right;
+		}
+
+		.btn::before{
+			content: '';
+			width: 100%;
+			height: 40%;
+			background-color: #fff;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			transform: translateX(-100%);
+			transition: all 0.3s ease-in-out;
+		}
+
+		
+
+	</style>
+</head>
+<body>
+
+	<button type="button" class="btn"><span>Read More...</span> <em></em></button>
+
+</body>
+</html>
